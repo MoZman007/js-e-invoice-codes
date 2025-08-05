@@ -1,6 +1,6 @@
 import type { CodeList } from "../../types.js";
 
-export const CODES: CodeList = [
+export const UNTDID_7143_3: CodeList = [
 	{
 		code: "TSU",
 		name: "EU RoHS Directive",
