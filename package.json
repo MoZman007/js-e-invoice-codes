@@ -1,6 +1,6 @@
 {
   "name": "untdid",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://www.rechnungs-api.de",
   "repository": "github:pikaju/js-untdid",
   "keywords": [
@@ -33,7 +33,6 @@
   "devDependencies": {
     "@biomejs/biome": "^2.0.5",
     "@types/node": "^24.2.0",
-    "tsup": "^8.4.0",
     "tsx": "^4.20.3",
     "typescript": "5.8.2"
   },
@@ -117,6 +116,21 @@
       "import": "./dist/esm/7161/3/index.js",
       "require": "./dist/cjs/7161/3/index.js",
       "types": "./dist/esm/7161/3/index.d.ts"
+    },
+    "./4461/1": {
+      "import": "./dist/esm/4461/1/index.js",
+      "require": "./dist/cjs/4461/1/index.js",
+      "types": "./dist/esm/4461/1/index.d.ts"
+    },
+    "./4461/2": {
+      "import": "./dist/esm/4461/2/index.js",
+      "require": "./dist/cjs/4461/2/index.js",
+      "types": "./dist/esm/4461/2/index.d.ts"
+    },
+    "./4461/3": {
+      "import": "./dist/esm/4461/3/index.js",
+      "require": "./dist/cjs/4461/3/index.js",
+      "types": "./dist/esm/4461/3/index.d.ts"
     },
     "./1153/1": {
       "import": "./dist/esm/1153/1/index.js",

@@ -75,9 +75,9 @@ console.log('Tax category codes:', UNTDID_5305_3);
 For a more optimized approach, you can deep-import a single code list. The package `exports` are configured to allow this.
 
 ```javascript
-import { CODES } from 'untdid/7143/1';
+import { UNTDID_7143_1 } from 'untdid/7143/1';
 
-console.log(CODES);
+console.log(UNTDID_7143_1);
 // [
 //   {
 //   	code: "AA",
@@ -116,6 +116,7 @@ This package includes the following UNTDID code lists, which are commonly used i
 *   **1153**: Reference code qualifier
 *   **2005**: Date or time or period function code qualifier
 *   **4451**: Text subject code qualifier
+*   **4461**: Payment means code
 *   **5189**: Allowance or charge identification code
 *   **5305**: Duty or tax or fee category code
 *   **7143**: Item type identification code

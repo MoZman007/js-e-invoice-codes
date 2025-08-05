@@ -24,7 +24,7 @@ const exports: Record<
 
 for (const list of lists) {
 	for (const version of versions) {
-		const source = `https://www.xrepository.de/api/xrepository/urn:xoev-de:kosit:codeliste:untdid.${list}_${version}/download/UNTDID_${list}_${version}.json`;
+		const source = `https://www.xrepository.de/api/xrepository/urn:xoev-de:${list === 4461 ? "xrechnung" : "kosit"}:codeliste:untdid.${list}_${version}/download/UNTDID_${list}_${version}.json`;
 
 		const response = await fetch(source);
 		if (response.status === 404) continue;
@@ -46,13 +46,13 @@ for (const list of lists) {
 			`
 			import type { CodeList } from "../../types.js";
 
-			export const CODES: CodeList = ${JSON.stringify(data)}
+			export const UNTDID_${list}_${version}: CodeList = ${JSON.stringify(data)}
 			`,
 		);
 
 		await fs.appendFile(
 			`src/index.ts`,
-			`export { CODES as UNTDID_${list}_${version} } from "./${list}/${version}/index.js";\n`,
+			`export { UNTDID_${list}_${version} } from "./${list}/${version}/index.js";\n`,
 		);
 
 		exports[`./${list}/${version}`] = {
