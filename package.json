@@ -1,0 +1,187 @@
+{
+  "name": "untdid",
+  "version": "0.0.1",
+  "homepage": "https://www.rechnungs-api.de",
+  "repository": "github:pikaju/js-untdid",
+  "keywords": [
+    "untdid",
+    "code-lists",
+    "codes",
+    "code list",
+    "en16931",
+    "zugferd",
+    "xrechnung",
+    "e-rechnung",
+    "rechnung",
+    "e-invoice",
+    "invoice"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "format": "biome format --write",
+    "generate": "tsx ./src/generate.ts && yarn format",
+    "build": "rm -r dist/ && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.5",
+    "@types/node": "^24.2.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.20.3",
+    "typescript": "5.8.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./7143/1": {
+      "import": "./dist/esm/7143/1/index.js",
+      "require": "./dist/cjs/7143/1/index.js",
+      "types": "./dist/esm/7143/1/index.d.ts"
+    },
+    "./7143/2": {
+      "import": "./dist/esm/7143/2/index.js",
+      "require": "./dist/cjs/7143/2/index.js",
+      "types": "./dist/esm/7143/2/index.d.ts"
+    },
+    "./7143/3": {
+      "import": "./dist/esm/7143/3/index.js",
+      "require": "./dist/cjs/7143/3/index.js",
+      "types": "./dist/esm/7143/3/index.d.ts"
+    },
+    "./7143/4": {
+      "import": "./dist/esm/7143/4/index.js",
+      "require": "./dist/cjs/7143/4/index.js",
+      "types": "./dist/esm/7143/4/index.d.ts"
+    },
+    "./4451/1": {
+      "import": "./dist/esm/4451/1/index.js",
+      "require": "./dist/cjs/4451/1/index.js",
+      "types": "./dist/esm/4451/1/index.d.ts"
+    },
+    "./4451/2": {
+      "import": "./dist/esm/4451/2/index.js",
+      "require": "./dist/cjs/4451/2/index.js",
+      "types": "./dist/esm/4451/2/index.d.ts"
+    },
+    "./4451/3": {
+      "import": "./dist/esm/4451/3/index.js",
+      "require": "./dist/cjs/4451/3/index.js",
+      "types": "./dist/esm/4451/3/index.d.ts"
+    },
+    "./4451/4": {
+      "import": "./dist/esm/4451/4/index.js",
+      "require": "./dist/cjs/4451/4/index.js",
+      "types": "./dist/esm/4451/4/index.d.ts"
+    },
+    "./2005/1": {
+      "import": "./dist/esm/2005/1/index.js",
+      "require": "./dist/cjs/2005/1/index.js",
+      "types": "./dist/esm/2005/1/index.d.ts"
+    },
+    "./2005/2": {
+      "import": "./dist/esm/2005/2/index.js",
+      "require": "./dist/cjs/2005/2/index.js",
+      "types": "./dist/esm/2005/2/index.d.ts"
+    },
+    "./2005/3": {
+      "import": "./dist/esm/2005/3/index.js",
+      "require": "./dist/cjs/2005/3/index.js",
+      "types": "./dist/esm/2005/3/index.d.ts"
+    },
+    "./2005/4": {
+      "import": "./dist/esm/2005/4/index.js",
+      "require": "./dist/cjs/2005/4/index.js",
+      "types": "./dist/esm/2005/4/index.d.ts"
+    },
+    "./7161/1": {
+      "import": "./dist/esm/7161/1/index.js",
+      "require": "./dist/cjs/7161/1/index.js",
+      "types": "./dist/esm/7161/1/index.d.ts"
+    },
+    "./7161/2": {
+      "import": "./dist/esm/7161/2/index.js",
+      "require": "./dist/cjs/7161/2/index.js",
+      "types": "./dist/esm/7161/2/index.d.ts"
+    },
+    "./7161/3": {
+      "import": "./dist/esm/7161/3/index.js",
+      "require": "./dist/cjs/7161/3/index.js",
+      "types": "./dist/esm/7161/3/index.d.ts"
+    },
+    "./1153/1": {
+      "import": "./dist/esm/1153/1/index.js",
+      "require": "./dist/cjs/1153/1/index.js",
+      "types": "./dist/esm/1153/1/index.d.ts"
+    },
+    "./1153/2": {
+      "import": "./dist/esm/1153/2/index.js",
+      "require": "./dist/cjs/1153/2/index.js",
+      "types": "./dist/esm/1153/2/index.d.ts"
+    },
+    "./1153/3": {
+      "import": "./dist/esm/1153/3/index.js",
+      "require": "./dist/cjs/1153/3/index.js",
+      "types": "./dist/esm/1153/3/index.d.ts"
+    },
+    "./5305/1": {
+      "import": "./dist/esm/5305/1/index.js",
+      "require": "./dist/cjs/5305/1/index.js",
+      "types": "./dist/esm/5305/1/index.d.ts"
+    },
+    "./5305/2": {
+      "import": "./dist/esm/5305/2/index.js",
+      "require": "./dist/cjs/5305/2/index.js",
+      "types": "./dist/esm/5305/2/index.d.ts"
+    },
+    "./5305/3": {
+      "import": "./dist/esm/5305/3/index.js",
+      "require": "./dist/cjs/5305/3/index.js",
+      "types": "./dist/esm/5305/3/index.d.ts"
+    },
+    "./1001/1": {
+      "import": "./dist/esm/1001/1/index.js",
+      "require": "./dist/cjs/1001/1/index.js",
+      "types": "./dist/esm/1001/1/index.d.ts"
+    },
+    "./1001/2": {
+      "import": "./dist/esm/1001/2/index.js",
+      "require": "./dist/cjs/1001/2/index.js",
+      "types": "./dist/esm/1001/2/index.d.ts"
+    },
+    "./1001/3": {
+      "import": "./dist/esm/1001/3/index.js",
+      "require": "./dist/cjs/1001/3/index.js",
+      "types": "./dist/esm/1001/3/index.d.ts"
+    },
+    "./1001/4": {
+      "import": "./dist/esm/1001/4/index.js",
+      "require": "./dist/cjs/1001/4/index.js",
+      "types": "./dist/esm/1001/4/index.d.ts"
+    },
+    "./5189/1": {
+      "import": "./dist/esm/5189/1/index.js",
+      "require": "./dist/cjs/5189/1/index.js",
+      "types": "./dist/esm/5189/1/index.d.ts"
+    },
+    "./5189/2": {
+      "import": "./dist/esm/5189/2/index.js",
+      "require": "./dist/cjs/5189/2/index.js",
+      "types": "./dist/esm/5189/2/index.d.ts"
+    },
+    "./5189/3": {
+      "import": "./dist/esm/5189/3/index.js",
+      "require": "./dist/cjs/5189/3/index.js",
+      "types": "./dist/esm/5189/3/index.d.ts"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"target": "ES5",
+		"module": "commonjs",
+		"outDir": "./dist/cjs"
+	},
+	"exclude": ["./src/generate.ts"]
+}
