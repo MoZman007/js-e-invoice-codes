@@ -36,7 +36,7 @@ for (const list of lists) {
 		const data = json.daten.map(([code, name, description]) => ({
 			code,
 			name,
-			description,
+			description: description ?? undefined,
 		}));
 
 		const folder = `src/${list}/${version}`;

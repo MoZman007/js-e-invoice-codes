@@ -1,0 +1,74 @@
+{
+  "name": "un-ece-recommendation",
+  "version": "0.1.0",
+  "homepage": "https://www.rechnungs-api.de",
+  "repository": "github:pikaju/js-un-ece-recommendation",
+  "keywords": [
+    "un/ece",
+    "recommendation",
+    "n°20",
+    "n°21",
+    "code-lists",
+    "codes",
+    "code list",
+    "en16931",
+    "zugferd",
+    "xrechnung",
+    "e-rechnung",
+    "rechnung",
+    "e-invoice",
+    "invoice"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "format": "biome format --write",
+    "generate": "tsx ./src/generate.ts && yarn format",
+    "build": "rm -rf dist/ && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.5",
+    "@types/node": "^24.2.0",
+    "tsx": "^4.20.3",
+    "typescript": "5.8.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./20/1": {
+      "import": "./dist/esm/20/1/index.js",
+      "require": "./dist/cjs/20/1/index.js",
+      "types": "./dist/esm/20/1/index.d.ts"
+    },
+    "./20/2": {
+      "import": "./dist/esm/20/2/index.js",
+      "require": "./dist/cjs/20/2/index.js",
+      "types": "./dist/esm/20/2/index.d.ts"
+    },
+    "./20/3": {
+      "import": "./dist/esm/20/3/index.js",
+      "require": "./dist/cjs/20/3/index.js",
+      "types": "./dist/esm/20/3/index.d.ts"
+    },
+    "./21/2": {
+      "import": "./dist/esm/21/2/index.js",
+      "require": "./dist/cjs/21/2/index.js",
+      "types": "./dist/esm/21/2/index.d.ts"
+    },
+    "./21/3": {
+      "import": "./dist/esm/21/3/index.js",
+      "require": "./dist/cjs/21/3/index.js",
+      "types": "./dist/esm/21/3/index.d.ts"
+    }
+  }
+}

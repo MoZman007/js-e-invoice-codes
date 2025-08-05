@@ -27,7 +27,7 @@
   "scripts": {
     "format": "biome format --write",
     "generate": "tsx ./src/generate.ts && yarn format",
-    "build": "rm -r dist/ && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "build": "rm -rf dist/ && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
     "prepack": "yarn build"
   },
   "devDependencies": {
