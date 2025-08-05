@@ -13,6 +13,10 @@ In the context of e-invoicing standards like **EN16931**, **ZUGFeRD**, and **XRe
 
 The source for these code lists is [XRepository](https://www.xrepository.de/).
 
+## RechnungsAPI
+
+If you are looking for an API solution to generate German e-invoice documents, consider checking out [RechnungsAPI](https://www.rechnungs-api.de), without which this package would not exist.
+
 ## Installation
 
 Install the package using your favorite package manager:
