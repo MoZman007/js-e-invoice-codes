@@ -1,8 +1,8 @@
 {
   "name": "untdid",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://www.rechnungs-api.de",
-  "repository": "github:pikaju/js-untdid",
+  "repository": "github:pikaju/js-e-invoice-codes",
   "keywords": [
     "untdid",
     "code-lists",
