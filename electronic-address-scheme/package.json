@@ -1,0 +1,75 @@
+{
+  "name": "electronic-address-scheme",
+  "version": "0.1.0",
+  "homepage": "https://www.rechnungs-api.de",
+  "repository": "github:pikaju/js-e-invoice-codes",
+  "keywords": [
+    "electronic",
+    "address",
+    "scheme",
+    "eas",
+    "eletronic address scheme",
+    "code-lists",
+    "codes",
+    "code list",
+    "en16931",
+    "zugferd",
+    "xrechnung",
+    "e-rechnung",
+    "rechnung",
+    "e-invoice",
+    "invoice"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "format": "biome format --write",
+    "generate": "tsx ./src/generate.ts && yarn format",
+    "build": "rm -rf dist/ && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.5",
+    "@types/node": "^24.2.0",
+    "tsx": "^4.20.3",
+    "typescript": "5.8.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./1": {
+      "import": "./dist/esm/1/index.js",
+      "require": "./dist/cjs/1/index.js",
+      "types": "./dist/esm/1/index.d.ts"
+    },
+    "./2": {
+      "import": "./dist/esm/2/index.js",
+      "require": "./dist/cjs/2/index.js",
+      "types": "./dist/esm/2/index.d.ts"
+    },
+    "./3": {
+      "import": "./dist/esm/3/index.js",
+      "require": "./dist/cjs/3/index.js",
+      "types": "./dist/esm/3/index.d.ts"
+    },
+    "./4": {
+      "import": "./dist/esm/4/index.js",
+      "require": "./dist/cjs/4/index.js",
+      "types": "./dist/esm/4/index.d.ts"
+    },
+    "./5": {
+      "import": "./dist/esm/5/index.js",
+      "require": "./dist/cjs/5/index.js",
+      "types": "./dist/esm/5/index.d.ts"
+    }
+  }
+}
