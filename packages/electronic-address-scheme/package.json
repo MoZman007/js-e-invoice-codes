@@ -1,6 +1,6 @@
 {
   "name": "electronic-address-scheme",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://www.rechnungs-api.de",
   "repository": "github:pikaju/js-e-invoice-codes",
   "keywords": [
@@ -45,6 +45,11 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js",
       "types": "./dist/esm/index.d.ts"
+    },
+    "./latest": {
+      "import": "./dist/esm/latest.js",
+      "require": "./dist/cjs/latest.js",
+      "types": "./dist/esm/latest.d.ts"
     },
     "./1": {
       "import": "./dist/esm/1/index.js",

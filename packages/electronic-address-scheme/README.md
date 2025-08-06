@@ -41,6 +41,8 @@ The main export of the package provides all versions of the EAS code list.
 
 ```javascript
 import { EAS } from 'electronic-address-scheme';
+// Or to just get the latest version:
+import { EAS } from 'electronic-address-scheme/latest';
 
 console.log('Latest EAS Codes:', EAS);
 // [

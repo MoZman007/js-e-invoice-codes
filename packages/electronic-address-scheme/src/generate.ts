@@ -19,6 +19,11 @@ const exports: Record<
 		require: "./dist/cjs/index.js",
 		types: "./dist/esm/index.d.ts",
 	},
+	"./latest": {
+		import: "./dist/esm/latest.js",
+		require: "./dist/cjs/latest.js",
+		types: "./dist/esm/latest.d.ts",
+	},
 };
 
 for (const version of versions) {
