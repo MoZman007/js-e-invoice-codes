@@ -2,7 +2,7 @@
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
 		"target": "esnext",
-		"module": "esnext",
+		"module": "preserve",
 		"outDir": "./dist/esm"
 	},
 	"exclude": ["./src/generate.ts"]

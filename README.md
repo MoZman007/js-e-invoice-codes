@@ -1,17 +1,19 @@
-# untdid
+# E-Invoice code lists needed in EN16931, ZUGFeRD and XRechnung for JavaScript / TypeScript
 
-[![npm version](https://badge.fury.io/js/untdid.svg)](https://badge.fury.io/js/untdid)
+[![npm version](https://badge.fury.io/js/e-invoice-codes.svg)](https://badge.fury.io/js/e-invoice-codes)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-JavaScript package for the United Nations Trade Data Interchange Directory (UNTDID) code lists.
+A convenient meta-package that bundles essential code lists for European e-invoicing standards like **EN16931**, **ZUGFeRD**, and **XRechnung**. It simplifies development by providing curated codes from various official sources in one place.
 
-## About UNTDID
+## Why This Package?
 
-The **United Nations Trade Data Interchange Directory (UNTDID)** is a set of internationally agreed-upon standards for the electronic interchange of structured data. These directories are maintained by the UNECE and are a part of the UN/EDIFACT standard.
+When building applications that handle e-invoices, you often need several standardized code lists from different sources. Instead of installing and managing multiple individual packages, `e-invoice-codes` provides a single dependency for the most frequently required lists.
 
-In the context of e-invoicing standards like **EN16931**, **ZUGFeRD**, and **XRechnung**, UNTDID provides standardized code lists for various data elements to ensure interoperability. For example, specific codes are used to identify document types, payment means, tax categories, and more. This package provides these official code lists in a simple, accessible JSON format for use in JavaScript and TypeScript applications.
+This package re-exports the latest, most common code lists from the following specialized packages, simplifying your project's dependency tree:
 
-The source for these code lists is [XRepository](https://www.xrepository.de/).
+*   [**`electronic-address-scheme`**](https://www.npmjs.com/package/electronic-address-scheme): Provides the Electronic Address Scheme (EAS) codes.
+*   [**`un-ece-recommendation`**](https://www.npmjs.com/package/un-ece-recommendation): Provides code lists for units of measure (Rec. 20) and packaging types (Rec. 21).
+*   [**`untdid`**](https://www.npmjs.com/package/untdid): Provides various code lists from the United Nations Trade Data Interchange Directory.
 
 ## RechnungsAPI
 
@@ -22,43 +24,51 @@ If you are looking for an API solution to generate German e-invoice documents, c
 Install the package using your favorite package manager:
 
 ```bash
-npm install untdid
+npm install e-invoice-codes
 ```
 
 or
 
 ```bash
-yarn add untdid
+yarn add e-invoice-codes
 ```
 
 ## Usage
 
-You can import the entire collection of code lists or import a specific code list individually to reduce your bundle size.
-
-### Importing All Code Lists
-
-All available code lists are exported as named objects from the main package entry point.
+You can import all the necessary code lists directly from the `e-invoice-codes` package. The exports are aliased for clarity and convenience.
 
 ```javascript
-import { UNTDID_1001_1, UNTDID_5305_2 } from 'untdid';
+import {
+  EAS,
+  REC_20,
+  REC_21,
+  UNTDID_1001,
+  UNTDID_5305
+} from 'e-invoice-codes';
 
-console.log('Document name codes:', UNTDID_1001_1);
+// Example: Get the latest Electronic Address Scheme codes
+console.log('EAS Codes:', EAS);
 // [
 //   {
-//   	code: "1",
-//   	name: "Certificate of analysis",
-//   	description: "Certificate providing the values of an analysis.",
+//   	code: "0002",
+//   	name: "System Information et Repertoire des Entreprise et des Etablissements: SIRENE",
 //   },
-//   {
-//   	code: "2",
-//   	name: "Certificate of conformity",
-//   	description:
-//   		"Certificate certifying the conformity to predefined definitions.",
-//   },
+//   { code: "0007", name: "Organisationsnummer" },
+//   { code: "0009", name: "SIRET-CODE" },
 //   ...
 // ]
 
-console.log('Tax category codes:', UNTDID_5305_3);
+// Example: Get UN/ECE Recommendation N°20 (Units of Measure)
+console.log('Unit Codes:', REC_20);
+// [
+//   { code: "05", name: "lift" },
+//   { code: "06", name: "small spray" },
+//   { code: "08", name: "heat lot" },
+//   ...
+// ]
+
+// Example: Get UNTDID 5305 (Tax category codes)
+console.log('Tax Category Codes:', UNTDID_5305);
 // [
 //   {
 //   	code: "A",
@@ -74,54 +84,36 @@ console.log('Tax category codes:', UNTDID_5305_3);
 // ]
 ```
 
-### Importing a Specific Code List
+## Included Code Lists
 
-For a more optimized approach, you can deep-import a single code list. The package `exports` are configured to allow this.
+This package re-exports the latest versions of the following code lists:
 
-```javascript
-import { UNTDID_7143_1 } from 'untdid/7143/1';
+#### From `electronic-address-scheme`
 
-console.log(UNTDID_7143_1);
-// [
-//   {
-//   	code: "AA",
-//   	name: "Product version number",
-//   	description:
-//   		"Number assigned by manufacturer or seller to identify the release of a product.",
-//   },
-//   {
-//   	code: "AB",
-//   	name: "Assembly",
-//   	description: "The item number is that of an assembly.",
-//   },
-//   ...
-// ]
-```
+*   **`EAS`**: The Electronic Address Scheme, used to identify the type of electronic address (e.g., GLN, Leitweg-ID).
 
-### Data Structure
+#### From `un-ece-recommendation`
 
-Each code list is an array of objects, where each object conforms to the `CodeListEntry` type.
+*   **`REC_20`**: UN/ECE Recommendation N°20 - Codes for Units of Measure.
+*   **`REC_21`**: UN/ECE Recommendation N°21 - Codes for package types.
 
-```typescript
-export interface CodeListEntry {
-	code: string;
-	name?: string;
-	description?: string;
-}
+#### From `untdid`
 
-export type CodeList = CodeListEntry[];
-```
+*   **`UNTDID_1001`**: Document name code.
+*   **`UNTDID_1153`**: Reference code qualifier.
+*   **`UNTDID_2005`**: Date or time or period function code qualifier.
+*   **`UNTDID_4451`**: Text subject code qualifier.
+*   **`UNTDID_4461`**: Payment means code.
+*   **`UNTDID_5189`**: Allowance or charge identification code.
+*   **`UNTDID_5305`**: Duty or tax or fee category code.
+*   **`UNTDID_7143`**: Item type identification code.
+*   **`UNTDID_7161`**: Special service description code.
 
-## Available Code Lists
+### Advanced Usage & Direct Access
 
-This package includes the following UNTDID code lists, which are commonly used in e-invoicing:
+While this package provides the most recent and common code lists, you might need a specific historical version or a code list not included here. In such cases, or to further optimize your application's bundle size, you can install the underlying packages directly and import the exact version you need.
 
-*   **1001**: Document name code
-*   **1153**: Reference code qualifier
-*   **2005**: Date or time or period function code qualifier
-*   **4451**: Text subject code qualifier
-*   **4461**: Payment means code
-*   **5189**: Allowance or charge identification code
-*   **5305**: Duty or tax or fee category code
-*   **7143**: Item type identification code
-*   **7161**: Special service description code
+*   `npm install electronic-address-scheme`
+*   `npm install un-ece-recommendation`
+*   `npm install untdid`
+

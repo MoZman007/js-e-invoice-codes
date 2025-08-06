@@ -39,7 +39,7 @@
     "prepack": "yarn build"
   },
   "dependencies": {
-    "electronic-address-scheme": "^0.1.1",
+    "electronic-address-scheme": "^0.1.2",
     "un-ece-recommendation": "^0.1.1",
     "untdid": "^0.1.3"
   },

@@ -471,7 +471,7 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:^2.0.5"
     "@types/node": "npm:^24.2.0"
-    electronic-address-scheme: "npm:^0.1.1"
+    electronic-address-scheme: "npm:^0.1.2"
     tsx: "npm:^4.20.3"
     typescript: "npm:5.8.2"
     un-ece-recommendation: "npm:^0.1.1"
@@ -486,10 +486,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electronic-address-scheme@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "electronic-address-scheme@npm:0.1.1"
-  checksum: 10c0/97bd80c9f73396e1738db91eb00722fea4316931769492e04b3e5d06b837a8976b0feedce023e3af7fa2991f1ee1f863078e53e311adf78baafce74578aa6860
+"electronic-address-scheme@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "electronic-address-scheme@npm:0.1.2"
+  checksum: 10c0/9e59705c7eb0c33da74be6f1ced7c1535fe3bb52c4bd254370b14e2c25ad35a6c8f1e33d9ee685b459f1d0b760f123e1cff666aace5902d179426c81d575e9ec
   languageName: node
   linkType: hard
 
